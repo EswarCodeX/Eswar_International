@@ -19,6 +19,7 @@ function App() {
       <Route path='/Garland' element={<Garland/>}/>
       <Route path='/Comingsoon' element={<Coming_soon/>}/>
     </Routes>
+    
     </>
   )
 }
