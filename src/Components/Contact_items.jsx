@@ -133,7 +133,7 @@ export const Contact_items = () => {
               <div className="text-3xl font-bold pb-2">HEAD OFFICE</div>
 
               <div className="flex flex-col items-center">
-                <div>ESWAR INTERNATIONAL</div>
+                <div className="font-semibold">ESWAR INTERNATIONAL</div>
                 <div>473U/5 Kamarajar 2nd Street,</div>
                 <div>Karppaga Vinayagar Street,Vandiyur</div>
                 <div>Madurai-625 020</div>
