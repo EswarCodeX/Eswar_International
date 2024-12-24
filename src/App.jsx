@@ -3,7 +3,6 @@ import Home from './Pages/Home';
 import Contact from './Pages/Contact'
 import { Route, Routes } from 'react-router-dom'
 import Vegetables from './Pages/Vegetables'
-import Garland from './pages/Garland'
 import Coming_soon from './pages/Coming_soon'
 import Navbar from './Components/Navbar';
 
