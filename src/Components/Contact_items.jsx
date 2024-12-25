@@ -24,10 +24,10 @@ export const Contact_items = () => {
   return (
     <>
       <div className="font-sans flex flex-col items-center">
-        <div className=" text-6xl font-sans pt-5 font-light">
+        <div className=" text-xl sm:text-6xl font-sans pt-5 font-light">
           WE'D LOVE TO HEAR FROM YOU
         </div>
-        <div className="font-sans  font-light pt-1 ">
+        <div className="font-sans sm:text-base text-xs text-center  font-light pt-1 ">
           Whether you're curious about our export services, seeking a quote, or
           exploring partnership opportunities, we're here to answer all your
           questions.
@@ -38,7 +38,7 @@ export const Contact_items = () => {
             onSubmit={sendEmail}
             className="w-full flex flex-col gap-3 items-center mx-auto"
           >
-            <div className="flex gap-3 ">
+            <div className=" gap-3 flex ">
               <input
                 className="border border-black rounded w-[400px] p-2"
                 name="from_name"
@@ -56,7 +56,7 @@ export const Contact_items = () => {
             </div>
             <div className="pt-2">
               <input
-                className="border border-black rounded w-[820px] p-2"
+                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
                 name="from_mail"
                 type="email"
                 placeholder="E-mail*"
@@ -65,7 +65,7 @@ export const Contact_items = () => {
             </div>
             <div className="pt-2">
               <input
-                className="border border-black rounded w-[820px] p-2"
+                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
                 name="from_address"
                 type="text"
                 placeholder="Address"
@@ -89,7 +89,7 @@ export const Contact_items = () => {
             </div>
             <div className="pt-2">
               <textarea
-                className="border border-black rounded w-[820px] p-2"
+                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
                 name="message"
                 placeholder="Comments*"
                 required
@@ -105,22 +105,20 @@ export const Contact_items = () => {
         <div className="pt-5 pb-5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1965.107241124615!2d78.15965280910441!3d9.916087038378537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5b8aa9d6adb%3A0xb261e56b050d3834!2sR%20M%20Kowshika%20flowers%20and%20garlands!5e0!3m2!1sen!2sin!4v1735026878335!5m2!1sen!2sin"
-            width="1400"
-            height="450"
             allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            className="w-[280px] h-[220px] sm:w-[1400px] sm:h-[450px]"
           ></iframe>
         </div>
 
-        <div className="flex pb-24 gap-44 pt-24">
+        <div className="flex flex-col  sm:flex pb-24 gap-14 sm:gap-44 pt-12 sm:pt-24">
           <div className="flex hover:shadow-md hover:shadow-[#3F72AF]/50 p-4 ">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="170"
-                width="170"
                 viewBox="0 0 384 512"
+                className="h-[100px] w-[100px] sm:h-[170px] sm:w-[170px]"
               >
                 <path
                   fill="#112d4e"
@@ -130,14 +128,22 @@ export const Contact_items = () => {
             </div>
             <div className="h-full w-0.5 bg-[#112D4E] mr-4"></div>
             <div className="flex flex-col items-center">
-              <div className="text-3xl font-bold pb-2">HEAD OFFICE</div>
+              <div className="text-xl sm:text-3xl font-bold pb-2">
+                HEAD OFFICE
+              </div>
 
               <div className="flex flex-col items-center">
-                <div className="font-semibold">ESWAR INTERNATIONAL</div>
-                <div>473U/5 Kamarajar 2nd Street,</div>
-                <div>Karppaga Vinayagar Street,Vandiyur</div>
-                <div>Madurai-625 020</div>
-                <div>Tamil Nadu, India.</div>
+                <div className="font-semibold sm:text-base text-sm ">
+                  ESWAR INTERNATIONAL
+                </div>
+                <div className="sm:text-base text-xs">
+                  473U/5 Kamarajar 2nd Street,
+                </div>
+                <div className="sm:text-base text-xs">
+                  Karppaga Vinayagar Street,Vandiyur
+                </div>
+                <div className="sm:text-base text-xs">Madurai-625 020</div>
+                <div className="sm:text-base text-xs">Tamil Nadu, India.</div>
               </div>
             </div>
           </div>
@@ -146,9 +152,8 @@ export const Contact_items = () => {
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="170"
-                width="170"
                 viewBox="0 0 384 512"
+                className="h-[100px] w-[100px] sm:h-[170px] sm:w-[170px]"
               >
                 <path
                   fill="#112d4e"
@@ -158,10 +163,10 @@ export const Contact_items = () => {
             </div>
             <div className="h-full w-0.5 bg-[#112D4E] mr-4"></div>
             <div className="flex flex-col items-center">
-              <div className="text-3xl font-bold pb-3">CONTACT</div>
+              <div className="text-xl sm:text-3xl font-bold pb-3">CONTACT</div>
 
               <div className="flex flex-col items-center gap-1">
-                <div className="flex ">
+                <div className="flex sm:text-base text-xs sm:-ml-0 -ml-1 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
@@ -177,7 +182,7 @@ export const Contact_items = () => {
                   eswarinternational10@gmail.com
                 </div>
 
-                <div className="flex">
+                <div className="flex sm:text-base text-xs -ml-4 sm:-ml-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -193,7 +198,7 @@ export const Contact_items = () => {
                   +91 98940 83855 , +91 98941 68837
                 </div>
 
-                <div className="flex">
+                <div className="flex sm:text-base text-xs">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
