@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Menuopen from "./Menuopen";
 
 export default function Navbar() {
   const [servicesopen, setservicesopen] = useState(false);
+  const [menuopen, setmenuopen] = useState(false);
   const [fix, setfix] = useState(false);
 
   function setfixed() {
@@ -15,7 +17,7 @@ export default function Navbar() {
 
   window.addEventListener("scroll", setfixed);
   return (
-    <>
+    <div className="z-50">
       <div
         className={
           fix
@@ -24,9 +26,23 @@ export default function Navbar() {
         }
       >
         <div className="font-sans ">ESWAR INTERNATIONAL</div>
-        <div className="sm:hidden flex">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+        <div
+          className="sm:hidden flex  "
+          onClick={() => setmenuopen(!menuopen)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
           </svg>
         </div>
         <div className="font-sans list-none gap-8 hidden sm:flex">
@@ -40,7 +56,7 @@ export default function Navbar() {
           </li>
           <li className=" cursor-pointer">
             <Link
-              to="/About"
+              to="/"
               className="no-underline text-black hover:text-[#3F72AF] "
             >
               ABOUT
@@ -95,6 +111,9 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </>
+      <div className="sm:hidden">
+      <Menuopen menuopen={menuopen} setmenuopen={setmenuopen}/>
+      </div>
+    </div>
   );
 }

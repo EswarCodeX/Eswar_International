@@ -24,84 +24,83 @@ export const Contact_items = () => {
   return (
     <>
       <div className="font-sans flex flex-col items-center">
-        <div className=" text-xl sm:text-6xl font-sans pt-5 font-light">
+        <h1 className=" text-xl sm:text-6xl font-sans pt-5 font-light">
           WE'D LOVE TO HEAR FROM YOU
-        </div>
-        <div className="font-sans sm:text-base text-xs text-center  font-light pt-1 ">
+        </h1>
+        <p className="font-sans sm:text-base text-xs text-center  font-light pt-1 ">
           Whether you're curious about our export services, seeking a quote, or
           exploring partnership opportunities, we're here to answer all your
           questions.
-        </div>
-        <div className="pt-20 w-full">
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="w-full flex flex-col gap-3 items-center mx-auto"
-          >
-            <div className=" gap-3 flex ">
-              <input
-                className="border border-black rounded w-[400px] p-2"
-                name="from_name"
-                type="text"
-                placeholder="Name*"
-                required
-              />
-              <input
-                className="border border-black rounded w-[400px] p-2"
-                name="from_number"
-                type="text"
-                placeholder="Contact Number*"
-                required
-              />
-            </div>
-            <div className="pt-2">
-              <input
-                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
-                name="from_mail"
-                type="email"
-                placeholder="E-mail*"
-                required
-              />
-            </div>
-            <div className="pt-2">
-              <input
-                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
-                name="from_address"
-                type="text"
-                placeholder="Address"
-              />
-            </div>
-            <div className="flex gap-3 pt-2">
-              <input
-                className="border border-black rounded w-[400px] p-2"
-                name="from_city"
-                type="text"
-                placeholder="City*"
-                required
-              />
-              <input
-                className="border border-black rounded w-[400px] p-2"
-                name="from_country"
-                type="text"
-                placeholder="Country*"
-                required
-              />
-            </div>
-            <div className="pt-2">
-              <textarea
-                className="border border-black rounded w-[300px] sm:w-[820px] p-2"
-                name="message"
-                placeholder="Comments*"
-                required
-              ></textarea>
-            </div>
+        </p>
+
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-full mt-16 flex flex-col gap-3 items-center mx-auto p-2"
+        >
+          <div className=" gap-3 flex flex-col sm:flex-row w-full justify-center">
             <input
-              className="bg-[#3F72AF] px-32 py-2 rounded text-white"
-              type="submit"
-              value="Submit"
+              className="border border-black rounded w-full sm:w-[400px] p-2"
+              name="from_name"
+              type="text"
+              placeholder="Name*"
+              required
             />
-          </form>
-        </div>
+            <input
+              className="border border-black rounded w-full sm:w-[400px] p-2"
+              name="from_number"
+              type="text"
+              placeholder="Contact Number*"
+              required
+            />
+          </div>
+
+          <input
+            className="border border-black rounded w-full sm:w-[820px] p-2 pt-2 "
+            name="from_mail"
+            type="email"
+            placeholder="E-mail*"
+            required
+          />
+
+          <input
+            className="border border-black rounded w-full sm:w-[820px] p-2"
+            name="from_address"
+            type="text"
+            placeholder="Address"
+          />
+
+          <div className="flex flex-col sm:flex-row gap-3 pt-2 w-full justify-center">
+            <input
+              className="border border-black rounded w-full sm:w-[400px] p-2"
+              name="from_city"
+              type="text"
+              placeholder="City*"
+              required
+            />
+            <input
+              className="border border-black rounded w-full sm:w-[400px] p-2"
+              name="from_country"
+              type="text"
+              placeholder="Country*"
+              required
+            />
+          </div>
+
+          <textarea
+            className="border border-black rounded w-full sm:w-[820px] p-2"
+            name="message"
+            placeholder="Comments*"
+            required
+          ></textarea>
+
+          <input
+            className="bg-[#3F72AF] px-32 py-2 rounded text-white"
+            type="submit"
+            value="Submit"
+          />
+        </form>
+
         <div className="pt-5 pb-5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1965.107241124615!2d78.15965280910441!3d9.916087038378537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5b8aa9d6adb%3A0xb261e56b050d3834!2sR%20M%20Kowshika%20flowers%20and%20garlands!5e0!3m2!1sen!2sin!4v1735026878335!5m2!1sen!2sin"
@@ -112,8 +111,8 @@ export const Contact_items = () => {
           ></iframe>
         </div>
 
-        <div className="flex flex-col  sm:flex pb-24 gap-14 sm:gap-44 pt-12 sm:pt-24">
-          <div className="flex hover:shadow-md hover:shadow-[#3F72AF]/50 p-4 ">
+        <div className="flex flex-col  sm:flex-row pb-24 gap-14 sm:gap-44 pt-12 sm:pt-24">
+          <div className="flex hover:shadow-md hover:shadow-[#3F72AF]/50 p-1 sm:p-4 ">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +147,7 @@ export const Contact_items = () => {
             </div>
           </div>
 
-          <div className="flex items-center hover:shadow-md hover:shadow-[#3F72AF]/50 p-4 ">
+          <div className="flex items-center hover:shadow-md hover:shadow-[#3F72AF]/50  sm:p-4 ">
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
