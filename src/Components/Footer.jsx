@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <div className="w-full h-full bg-[#112D4E] font-sans  ">
-        <div className="pt-12 pl-5 sm:pl-32 gap-0 sm:gap-48 flex-col flex sm:flex-row pb-14">
+        <div className="pt-12 pl-5 sm:pl-32 sm:gap-52 flex-col flex sm:flex-row pb-14">
           <div className="w-full sm:w-[20%] ">
             <div className="text-[#F9F7F7] text-xl sm:text-2xl font-bold">
               ESWAR INTERNATION
