@@ -11,7 +11,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
   return (
     <>
       {menuopen && (
-        <ul className=" flex-col w-full absolute z-50 shadow-lg  bg-white gap-4 ">
+        <ul className=" flex-col w-full absolute z-50 shadow-lg   gap-4 ">
           <li>
             <Link
               onClick={onpagenavigate}
