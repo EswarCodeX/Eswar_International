@@ -47,7 +47,7 @@ export default function Navbar() {
         <ul className="font-sans list-none gap-8 hidden sm:flex">
           {[
             { name: "HOME", path: "/" },
-            { name: "ABOUT", path: "/about" },
+            { name: "ABOUT", path: "/About" },
           ].map((item) => (
             <li key={item.path} className="cursor-pointer">
               <Link

@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 export default function About() {
   return (
     <>
-      <div className="flex justify-evenly py-24">
+      <div className="flex flex-col sm:flex-row  justify-evenly sm:py-24 py-12">
         <About_content />
         <Timeline />
       </div>
