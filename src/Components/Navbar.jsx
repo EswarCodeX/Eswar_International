@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Menuopen from "./Menuopen";
+import logo from "../assets/logo_main.png";
 
 export default function Navbar() {
   const [servicesopen, setservicesopen] = useState(false);
   const [menuopen, setmenuopen] = useState(false);
   const [fix, setfix] = useState(false);
+  const location = useLocation(); // Get the current route
 
   function setfixed() {
     if (window.scrollY >= 1) {
@@ -16,20 +18,17 @@ export default function Navbar() {
   }
 
   window.addEventListener("scroll", setfixed);
+
   return (
     <div className="z-50">
       <div
-        className={
-          fix
-            ? "flex justify-between px-[5%] w-full text-lg mt-8 mb-3 top-auto"
-            : "flex justify-between px-[5%] w-full text-lg mt-8 mb-3"
-        }
+        className={`flex justify-between px-[5%] w-full text-lg mt-8 mb-3 ${
+          fix ? "top-auto" : ""
+        }`}
       >
+        {/*<div><img src={logo} alt="" /></div>*/}
         <div className="font-sans ">ESWAR INTERNATIONAL</div>
-        <div
-          className="sm:hidden flex  "
-          onClick={() => setmenuopen(!menuopen)}
-        >
+        <div className="sm:hidden flex" onClick={() => setmenuopen(!menuopen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,85 +45,94 @@ export default function Navbar() {
           </svg>
         </div>
         <ul className="font-sans list-none gap-8 hidden sm:flex">
-          <li className="  cursor-pointer">
-            <Link
-              to="/"
-              className="no-underline text-black hover:text-[#3F72AF] "
-            >
-              HOME
-            </Link>{" "}
-          </li>
-          <li className=" cursor-pointer">
-            <Link
-              to="/about"
-              className="no-underline text-black hover:text-[#3F72AF] "
-            >
-              ABOUT
-            </Link>{" "}
-          </li>
+          {[
+            { name: "HOME", path: "/" },
+            { name: "ABOUT", path: "/about" },
+          ].map((item) => (
+            <li key={item.path} className="cursor-pointer">
+              <Link
+                to={item.path}
+                className={`no-underline hover:text-[#3F72AF] ${
+                  location.pathname === item.path
+                    ? "text-[#3F72AF]"
+                    : "text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+
+          {/* SERVICES - Placed at third position */}
           <li
-            className=" cursor-pointer"
+            className="cursor-pointer"
             onClick={() => setservicesopen(!servicesopen)}
           >
-            {" "}
-            <Link className="no-underline text-black hover:text-[#3F72AF] flex ">
+            <Link className="no-underline flex items-center hover:text-[#3F72AF]">
               SERVICES{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
-                class="size-6"
+                className="size-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="m19.5 8.25-7.5 7.5-7.5-7.5"
                 />
               </svg>
-            </Link>{" "}
-          </li>
-          <li className="  cursor-pointer">
-            <Link
-              to="/Contact"
-              className="no-underline text-black hover:text-[#3F72AF] "
-            >
-              {" "}
-              CONTACT
             </Link>
           </li>
-          <li className="  cursor-pointer">
-            <Link
-              to="/ComingSoon"
-              className="no-underline text-black hover:text-[#3F72AF] "
-            >
-              COMING&nbsp;SOON
-            </Link>{" "}
-          </li>
+
+          {[
+            { name: "CONTACT", path: "/Contact" },
+            { name: "COMING SOON", path: "/ComingSoon" },
+          ].map((item) => (
+            <li key={item.path} className="cursor-pointer">
+              <Link
+                to={item.path}
+                className={`no-underline hover:text-[#3F72AF] ${
+                  location.pathname === item.path
+                    ? "text-[#3F72AF]"
+                    : "text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
+
       {servicesopen && (
-        <div className="absolute z-10 bg-white h-24 w-36 ml-[69%] -mt-2">
+        <div className="absolute z-10 bg-white h-24 w-36 ml-[70%] -mt-4">
           <div className="h-1 bg-[#112D4E]"></div>
-          <div className="font-sans px-6 py-2 hover:bg-[#3F72AF] cursor-pointer">
-            <Link
-              to="/Vegetables"
-              className="no-underline text-black hover:text-[#F9F7F7] "
+          {[
+            { name: "VEGETABLES", path: "/Vegetables" },
+            { name: "GARLAND", path: "/Garland" },
+          ].map((item) => (
+            <div
+              key={item.path}
+              className="font-sans px-6 py-2 hover:bg-[#3F72AF] cursor-pointer"
             >
-              VEGETABLES
-            </Link>
-          </div>
-          <div className="font-sans px-6 py-2 hover:bg-[#3F72AF] cursor-pointer ">
-            <Link
-              to="/Garland"
-              className="no-underline text-black hover:text-[#F9F7F7] "
-            >
-              GARLAND
-            </Link>
-          </div>
+              <Link
+                to={item.path}
+                className={`no-underline hover:text-[#F9F7F7] ${
+                  location.pathname === item.path
+                    ? "text-[#3F72AF]"
+                    : "text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            </div>
+          ))}
         </div>
       )}
+
       <div className="sm:hidden">
         <Menuopen menuopen={menuopen} setmenuopen={setmenuopen} />
       </div>
