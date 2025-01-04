@@ -45,7 +45,7 @@ export default function Navbar() {
             />
           </svg>
         </div>
-        <div className="font-sans list-none gap-8 hidden sm:flex">
+        <ul className="font-sans list-none gap-8 hidden sm:flex">
           <li className="  cursor-pointer">
             <Link
               to="/"
@@ -56,7 +56,7 @@ export default function Navbar() {
           </li>
           <li className=" cursor-pointer">
             <Link
-              to="/"
+              to="/about"
               className="no-underline text-black hover:text-[#3F72AF] "
             >
               ABOUT
@@ -102,7 +102,7 @@ export default function Navbar() {
               COMING&nbsp;SOON
             </Link>{" "}
           </li>
-        </div>
+        </ul>
       </div>
       {servicesopen && (
         <div className="absolute z-10 bg-white h-24 w-36 ml-[69%] -mt-2">
