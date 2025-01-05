@@ -26,8 +26,10 @@ export default function Navbar() {
           fix ? "top-auto" : ""
         }`}
       >
-        {/*<div><img src={logo} alt="" /></div>*/}
-        <div className="font-sans ">ESWAR INTERNATIONAL</div>
+        <div className="flex gap-1 sm:gap-3">
+          <img src={logo} className="h-7 w-10 sm:h-10 sm:w-16 " alt="" />
+          <div className="font-sans ">ESWAR INTERNATIONAL</div>
+        </div>
         <div className="sm:hidden flex" onClick={() => setmenuopen(!menuopen)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +118,7 @@ export default function Navbar() {
           ].map((item) => (
             <div
               key={item.path}
-              className="font-sans px-6 py-2 hover:bg-[#3F72AF] cursor-pointer"
+              className="font-sans px-6 py-2 hover:bg-[#3F72AF]"
             >
               <Link
                 to={item.path}

@@ -25,7 +25,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
           <li className=" cursor-pointer">
             <Link
               onClick={onpagenavigate}
-              to="/"
+              to="/About"
               className="no-underline text-black hover:text-[#3F72AF] -ml-4"
             >
               ABOUT

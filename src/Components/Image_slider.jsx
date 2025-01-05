@@ -6,7 +6,7 @@ import img4 from "../assets/village.jpg";
 
 export default function CarouselWithContent() {
   return (
-    <Carousel loop={true} autoplay={true} className="rounded-xl">
+    <Carousel loop={true} autoplay={true} className="">
       <div className="relative h-full w-full">
         <img src={img1} alt="image 1" className="h-full w-full object-cover" />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
