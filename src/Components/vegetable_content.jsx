@@ -90,8 +90,8 @@ export default function Vegetables() {
         <h1 className="flex justify-center font-sans pt-4">VEGETABLES</h1>
       </div>
 
-      <div className="flex justify-center py-5 w-screen p-4 sm:p-0 ">
-        <div className="grid sm:grid-cols-4 grid-cols-2 gap-5  sm:gap-12 justify-items-center w-[1400px] ">
+      <div className="flex justify-center py-5 p-4 sm:p-0 ">
+        <div className="grid sm:grid-cols-4 grid-cols-2 gap-5  sm:gap-12 justify-items-center w-[1300px] ">
           {vegetables.map((vegetable) => (
             <>
               {" "}
