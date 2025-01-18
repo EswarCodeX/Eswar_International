@@ -7,6 +7,7 @@ import Garland from "./Pages/Garland";
 import Coming_soon from "./Pages/Coming_soon";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
+import Details from "./Pages/Details";
 
 function App() {
   return (
@@ -14,11 +15,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Vegetables" element={<Vegetables />} />
-        <Route path="/Garland" element={<Garland />} />
-        <Route path="/Comingsoon" element={<Coming_soon />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/vegetables" element={<Vegetables />} />
+        <Route path="/garland" element={<Garland />} />
+        <Route path="/comingsoon" element={<Coming_soon />} />
+        <Route path="/vegetables/:id" element={<Details />} />
       </Routes>
     </>
   );

@@ -82,7 +82,7 @@ export default function Footer() {
           </div>
           <div className=" text-3xl font-bold">
             <div className="pb-2">
-              <Link to="/About" className="no-underline text-[#F9F7F7]">
+              <Link to="/about" className="no-underline text-[#F9F7F7]">
                 About Us
               </Link>
             </div>
@@ -98,14 +98,14 @@ export default function Footer() {
                 <div className="   text-xl font-medium pl-4 pb-2  ">
                   <div className="pb-1">
                     <Link
-                      to="/Vegetables"
+                      to="/vegetables"
                       className="no-underline text-white/70 "
                     >
                       Vegitables
                     </Link>{" "}
                   </div>
                   <div>
-                    <Link to="/Garland" className="no-underline text-white/70 ">
+                    <Link to="/garland" className="no-underline text-white/70 ">
                       Garland
                     </Link>{" "}
                   </div>
@@ -113,12 +113,12 @@ export default function Footer() {
               )}
             </div>
             <div className="pb-2">
-              <Link to="/Contact" className="no-underline text-[#F9F7F7]">
+              <Link to="/contact" className="no-underline text-[#F9F7F7]">
                 Contact
               </Link>{" "}
             </div>
             <div className="pb-2">
-              <Link to="/Comingsoon" className="no-underline text-[#F9F7F7]">
+              <Link to="/comingsoon" className="no-underline text-[#F9F7F7]">
                 Coming Soon
               </Link>{" "}
             </div>

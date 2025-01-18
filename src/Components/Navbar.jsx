@@ -49,7 +49,7 @@ export default function Navbar() {
         <ul className="font-sans list-none gap-8 hidden sm:flex">
           {[
             { name: "HOME", path: "/" },
-            { name: "ABOUT", path: "/About" },
+            { name: "ABOUT", path: "/about" },
           ].map((item) => (
             <li key={item.path} className="cursor-pointer">
               <Link
@@ -90,8 +90,8 @@ export default function Navbar() {
           </li>
 
           {[
-            { name: "CONTACT", path: "/Contact" },
-            { name: "COMING SOON", path: "/ComingSoon" },
+            { name: "CONTACT", path: "/contact" },
+            { name: "COMING SOON", path: "/comingSoon" },
           ].map((item) => (
             <li key={item.path} className="cursor-pointer">
               <Link
@@ -113,8 +113,8 @@ export default function Navbar() {
         <div className="absolute z-10 bg-white h-24 w-36 ml-[70%] -mt-4">
           <div className="h-1 bg-[#112D4E]"></div>
           {[
-            { name: "VEGETABLES", path: "/Vegetables" },
-            { name: "GARLAND", path: "/Garland" },
+            { name: "VEGETABLES", path: "/vegetables" },
+            { name: "GARLAND", path: "/garland" },
           ].map((item) => (
             <div
               key={item.path}

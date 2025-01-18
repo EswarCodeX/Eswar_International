@@ -25,7 +25,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
           <li className=" cursor-pointer">
             <Link
               onClick={onpagenavigate}
-              to="/About"
+              to="/about"
               className="no-underline text-black hover:text-[#3F72AF] -ml-4"
             >
               ABOUT
@@ -57,7 +57,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
               <div className="font-sans hover:bg-[#3F72AF]">
                 <Link
                   onClick={onpagenavigate}
-                  to="/Vegetables"
+                  to="/vegetables"
                   className="no-underline text-black/50"
                 >
                   VEGETABLES
@@ -66,7 +66,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
               <div className="font-sans hover:bg-[#3F72AF]">
                 <Link
                   onClick={onpagenavigate}
-                  to="/Garland"
+                  to="/garland"
                   className="no-underline text-black/50"
                 >
                   GARLAND
@@ -78,7 +78,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
           <li className="  cursor-pointer">
             <Link
               onClick={onpagenavigate}
-              to="/Contact"
+              to="/contact"
               className="no-underline text-black hover:text-[#3F72AF] -ml-4 "
             >
               {" "}
@@ -89,7 +89,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
           <li className=" cursor-pointer">
             <Link
               onClick={onpagenavigate}
-              to="/ComingSoon"
+              to="/comingSoon"
               className="no-underline text-black hover:text-[#3F72AF] -ml-4"
             >
               COMING&nbsp;SOON
