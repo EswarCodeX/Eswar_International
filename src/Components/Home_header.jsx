@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "../assets/ESWAR.png";
 import { vegetables } from "./Data/vegetable";
+import { garland } from "./Data/garland";
 
 const featuredVegetables = vegetables.slice(0, 4);
+const featuredGarlands = garland.slice(0, 4);
 
 export default function Home_header() {
   return (
@@ -55,6 +57,32 @@ export default function Home_header() {
           <div className="text-center">
             <Link
               to="/vegetables"
+              className="inline-block px-8 sm:py-3 py-1 sm:text-base text-sm text-white bg-[#3F72AF] rounded-md font-medium hover:bg-[#2E5A8B] transition-colors"
+            >
+              View More
+            </Link>
+          </div>
+        </div>
+
+        <div className="mb-12 font-sans">
+          <h2 className="font-semibold py-5">Garlands We Export</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
+            {featuredGarlands.map((item) => (
+              <div
+                key={item.id}
+                className="flex flex-col items-center sm:p-6 p-0 border rounded-lg shadow-md hover:shadow-lg transition-shadow bg-white"
+              >
+                <img
+                  src={item.img}
+                  alt={`Garland ${item.id}`}
+                  className="w-full h-20 sm:h-48 object-cover rounded-md mb-4"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link
+              to="/garland"
               className="inline-block px-8 sm:py-3 py-1 sm:text-base text-sm text-white bg-[#3F72AF] rounded-md font-medium hover:bg-[#2E5A8B] transition-colors"
             >
               View More
