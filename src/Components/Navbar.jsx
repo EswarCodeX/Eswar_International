@@ -70,7 +70,7 @@ export default function Navbar() {
             className="cursor-pointer"
             onClick={() => setservicesopen(!servicesopen)}
           >
-            <Link className="no-underline flex items-center hover:text-[#3F72AF]">
+            <Link className="no-underline flex items-center text-black hover:text-[#3F72AF]">
               SERVICES{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

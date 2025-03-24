@@ -11,92 +11,128 @@ export default function Menuopen({ menuopen, setmenuopen }) {
   return (
     <>
       {menuopen && (
-        <ul className=" flex-col w-full absolute z-50 bg-[#fafafa] space-y-2 shadow-lg  font-semibold text-xl">
-          <li>
-            <Link
-              onClick={onpagenavigate}
-              to="/"
-              className="no-underline text-black hover:text-[#3F72AF] -ml-4 "
+        <div className="fixed inset-0 bg-white z-50 flex flex-col justify-between py-12  ">
+          <div className="container mx-auto px-6 flex flex-col items-center">
+            <button
+              onClick={() => setmenuopen(false)}
+              className="absolute top-6 right-6"
             >
-              HOME
-            </Link>{" "}
-          </li>
-          <hr className="-ml-4" />
-          <li className=" cursor-pointer">
-            <Link
-              onClick={onpagenavigate}
-              to="/about"
-              className="no-underline text-black hover:text-[#3F72AF] -ml-4"
-            >
-              ABOUT
-            </Link>{" "}
-          </li>
-          <hr className="-ml-4" />
-          <li
-            className=" cursor-pointer no-underline text-black  hover:text-[#3F72AF] -ml-4 flex justify-between "
-            onClick={() => setservicesopen(!servicesopen)}
-          >
-            SERVICES{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6 mr-4"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-              />
-            </svg>
-          </li>
-          {servicesopen && (
-            <div className="pl-4">
-              <div className="font-sans hover:bg-[#3F72AF]">
-                <Link
-                  onClick={onpagenavigate}
-                  to="/vegetables"
-                  className="no-underline text-black/50"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-8 h-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <nav className="flex flex-col space-y-8 items-center text-2xl font-light mt-44">
+              <Link
+                to="/"
+                onClick={onpagenavigate}
+                className="hover:text-gray-600 tracking-wide no-underline text-black"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={onpagenavigate}
+                className="hover:text-gray-600 tracking-wide no-underline text-black"
+              >
+                About Us
+              </Link>
+              <div className="relative text-center">
+                <button
+                  onClick={() => setservicesopen(!servicesopen)}
+                  className="flex items-center hover:text-gray-600 tracking-wide "
                 >
-                  VEGETABLES
-                </Link>
+                  Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-4 h-4 ml-1"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {servicesopen && (
+                  <div className="mt-4 space-y-4 text-xl">
+                    <Link
+                      to="/vegetables"
+                      onClick={onpagenavigate}
+                      className="block hover:text-gray-600 no-underline text-black"
+                    >
+                      Vegetables
+                    </Link>
+                    <Link
+                      to="/garland"
+                      onClick={onpagenavigate}
+                      className="block hover:text-gray-600 no-underline text-black"
+                    >
+                      Garland
+                    </Link>
+                  </div>
+                )}
               </div>
-              <div className="font-sans hover:bg-[#3F72AF]">
-                <Link
-                  onClick={onpagenavigate}
-                  to="/garland"
-                  className="no-underline text-black/50"
-                >
-                  GARLAND
-                </Link>
-              </div>
+            
+              <Link
+                to="/contact"
+                onClick={onpagenavigate}
+                className="hover:text-gray-600 tracking-wide no-underline text-black"
+              >
+                Contact
+              </Link>
+              <Link
+                to="/comingsoon"
+                onClick={onpagenavigate}
+                className="hover:text-gray-600 tracking-wide no-underline text-black"
+              >
+                Coming Soon
+              </Link>
+            </nav>
+          </div>
+          <div className="container mx-auto px-6 flex justify-center">
+            <div className="flex space-x-8 text-sm font-light">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600  no-underline text-black"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600  no-underline text-black"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-600  no-underline text-black"
+              >
+                Twitter
+              </a>
             </div>
-          )}
-          <hr className="-ml-4" />
-          <li className="  cursor-pointer">
-            <Link
-              onClick={onpagenavigate}
-              to="/contact"
-              className="no-underline text-black hover:text-[#3F72AF] -ml-4 "
-            >
-              {" "}
-              CONTACT
-            </Link>
-          </li>
-          <hr className="-ml-4" />
-          <li className=" cursor-pointer">
-            <Link
-              onClick={onpagenavigate}
-              to="/comingSoon"
-              className="no-underline text-black hover:text-[#3F72AF] -ml-4"
-            >
-              COMING&nbsp;SOON
-            </Link>{" "}
-          </li>
-          <div className="w-screen h-0.5 bg-[#112D4E] -ml-8"></div>
-        </ul>
+          </div>
+        </div>
       )}
     </>
   );
