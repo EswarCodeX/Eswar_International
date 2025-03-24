@@ -96,7 +96,7 @@ export default function Navbar() {
             <li key={item.path} className="cursor-pointer">
               <Link
                 to={item.path}
-                className={`no-underline hover:text-[#3F72AF] ${
+                className={`no-underline hover:text-[#F9F7F7] ${
                   location.pathname === item.path
                     ? "text-[#3F72AF]"
                     : "text-black"
@@ -122,6 +122,7 @@ export default function Navbar() {
             >
               <Link
                 to={item.path}
+                onClick={() => setservicesopen(false)}
                 className={`no-underline hover:text-[#F9F7F7] ${
                   location.pathname === item.path
                     ? "text-[#3F72AF]"

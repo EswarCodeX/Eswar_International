@@ -30,11 +30,7 @@ const VegetableCard = ({ vegetable }) => {
           />
         )}
       </div>
-      <div className="p-4">
-        <h3 className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-          {vegetable.name}
-        </h3>
-      </div>
+      
     </Link>
   );
 };

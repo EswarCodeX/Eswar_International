@@ -6,7 +6,7 @@ export default function Vegetables() {
   return (
     <>
       <Vegetable_content />
-      <Footer />
+     
     </>
   );
 }
