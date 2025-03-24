@@ -13,7 +13,7 @@ const GarlandCard = ({ garland }) => {
 
   return (
     <Link
-      to={`/garlands/${garland.id}`}
+    //   to={`/garlands/${garland.id}`}
       className="group no-underline transform transition-all duration-300 hover:scale-105 hover:shadow-xl rounded-lg overflow-hidden bg-white"
     >
       <div className="aspect-square relative">
