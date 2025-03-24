@@ -32,7 +32,7 @@ export default function Menuopen({ menuopen, setmenuopen }) {
                 />
               </svg>
             </button>
-            <nav className="flex flex-col space-y-8 items-center text-2xl font-light mt-44">
+            <nav className="flex flex-col space-y-8 items-center text-2xl font-light mt-36">
               <Link
                 to="/"
                 onClick={onpagenavigate}
