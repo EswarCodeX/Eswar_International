@@ -14,23 +14,46 @@ const VegetableCard = ({ vegetable }) => {
   return (
     <Link
       to={`/vegetables/${vegetable.id}`}
-      className="group no-underline transform transition-all duration-300 hover:scale-105 hover:shadow-xl rounded-lg overflow-hidden bg-white"
+      className="group no-underline transform transition-all duration-300 hover:scale-105"
     >
-      <div className="aspect-square relative">
-        {isLoading ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="animate-spin rounded-full h-8 w-8 border-4 border-blue-500 border-t-transparent"></div>
-          </div>
-        ) : (
+      <div className="bg-white rounded-xl shadow-xl overflow-hidden w-full max-w-xs flex flex-col">
+        <div className="relative h-44">
           <img
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             src={vegetable.img}
             alt={vegetable.name}
-            loading="lazy"
+            className="w-full h-full object-cover"
           />
-        )}
+          <div className="absolute top-3 left-3 flex gap-2">
+            <span className="px-2 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">
+              Fresh
+            </span>
+            <span className="px-2 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">
+              Export Grade
+            </span>
+          </div>
+        </div>
+        <div className="p-4 flex flex-col grow">
+          <h2 className="mb-1 font-bold text-lg uppercase text-gray-800">
+            {vegetable.name}
+          </h2>
+          <p className="mb-3 text-gray-500 text-sm">
+            Premium quality, pesticide-free
+          </p>
+          <div className="flex items-center mb-1 gap-2 text-yellow-600">
+            <svg
+              className="w-4 h-4"
+              fill="currentColor" /* star icon SVG path */
+            ></svg>
+            <span className="text-sm font-medium text-gray-600">
+              Export Quality
+            </span>
+          </div>
+          <div className="flex items-center gap-2 mt-auto">
+            <span className="text-green-700 font-semibold">Available</span>
+            <span className="w-2 h-2 bg-green-500 rounded-full inline-block"></span>
+          </div>
+        </div>
       </div>
-      
     </Link>
   );
 };
@@ -50,7 +73,6 @@ export default function Vegetables() {
           {vegetables.map((vegetable) => (
             <VegetableCard key={vegetable.id} vegetable={vegetable} />
           ))}
-         
         </div>
       </div>
     </div>

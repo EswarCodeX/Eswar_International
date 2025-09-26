@@ -1,5 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Example custom scrollbar without arrows */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f72af;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f72af;
+}
+
+/* 🚫 remove arrows */
+::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+
+::selection {
+  background: #008080; /* custom background color */
+  color: #ffffff;      /* custom text color */
+}
